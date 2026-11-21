@@ -1,0 +1,60 @@
+{
+  "_instrucoes": "Este é um arquivo molde para a criação de novas bases de conhecimento para o Chatbot Especialista Genérico. Preencha os campos abaixo conforme as instruções.",
+  "nome_bot": "NomeDoBot",
+  "limiar_confianca": 0.40,
+  "saudacao_inicial": "Olá! Eu sou o NomeDoBot, especialista no tema X. O que gostaria de saber?",
+  "fallback": "Desculpe, não compreendi. Pode reformular a sua pergunta?",
+  "intencoes": [
+    {
+      "_comentario": "Exemplo de Intenção Fixa: retorna aleatoriamente uma das strings da lista 'respostas'.",
+      "tag": "saudacao",
+      "exemplos": [
+        "ola",
+        "oi",
+        "bom dia",
+        "boa tarde",
+        "boa noite",
+        "ola tudo bem",
+        "e ai como vai"
+      ],
+      "respostas": [
+        "Olá! Em que posso te ajudar hoje?",
+        "Oi! Qual a sua dúvida sobre este tema?"
+      ]
+    },
+    {
+      "_comentario": "Exemplo de Intenção de Despedida: recomendada para que o bot encerre a conversa suavemente.",
+      "tag": "despedida",
+      "exemplos": [
+        "tchau",
+        "adeus",
+        "ate logo",
+        "ate mais",
+        "obrigado tchau",
+        "valeu falou"
+      ],
+      "respostas": [
+        "Até mais! Fico à disposição se precisar de mais informações.",
+        "Tchau! Foi um prazer te ajudar."
+      ]
+    },
+    {
+      "_comentario": "Exemplo de Intenção Dinâmica: busca chaves do dicionário 'fatos' na mensagem e preenche {entidade} e {valor} em 'template_resposta'.",
+      "tag": "consulta_fato",
+      "exemplos": [
+        "quem e o autor de",
+        "qual o criador de",
+        "quem desenvolveu",
+        "qual foi o autor de",
+        "quem criou a obra",
+        "quem escreveu"
+      ],
+      "template_resposta": "O autor de '{entidade}' é {valor}.",
+      "erro_entidade": "Não encontrei a obra informada na minha base. Tente perguntar sobre Obra A ou Obra B.",
+      "fatos": {
+        "Obra A": "Autor Exemplo 1 (1995)",
+        "Obra B": "Autor Exemplo 2 (2010)"
+      }
+    }
+  ]
+}

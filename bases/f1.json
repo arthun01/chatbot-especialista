@@ -1,0 +1,203 @@
+{
+  "nome_bot": "F1-Bot",
+  "limiar_confianca": 0.40,
+  "saudacao_inicial": "Olá! Eu sou o F1-Bot, seu assistente especialista em Fórmula 1. Pergunte sobre campeões mundiais, recordes de pilotos, regras de corrida, circuitos icônicos ou equipes lendárias!",
+  "fallback": "Não compreendi bem a sua pergunta sobre Fórmula 1. Você pode reformular com outras palavras ou perguntar sobre campeões, pilotos, pistas e regras?",
+  "intencoes": [
+    {
+      "tag": "saudacao",
+      "exemplos": [
+        "ola f1 bot",
+        "ola tudo bem",
+        "oi f1 bot",
+        "oi tudo bom",
+        "bom dia f1 bot",
+        "boa tarde f1 bot",
+        "boa noite f1 bot",
+        "e ai tudo bem com voce",
+        "opa tudo bom por ai",
+        "saudacoes fã de f1",
+        "fala ai bot de f1",
+        "fala meu amigo f1 bot"
+      ],
+      "respostas": [
+        "Fala fã do automobilismo! O que você gostaria de saber sobre a Fórmula 1 hoje?",
+        "Olá! Motor ligado e pronto para acelerar no conhecimento sobre F1. Mande sua dúvida!",
+        "Saudações! Pergunte-me sobre campeonatos, pilotos lendários, equipes ou regras das corridas.",
+        "Oi! F1-Bot na área. O que manda sobre o maior campeonato do automobilismo?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "exemplos": [
+        "tchau f1 bot",
+        "tchau ate logo",
+        "tchau ate mais",
+        "adeus ate mais",
+        "adeus f1 bot",
+        "ate logo amigo",
+        "ate mais ver",
+        "falou ate a proxima volta",
+        "obrigado pelas respostas e tchau",
+        "valeu pela ajuda e tchau",
+        "encerrar a conversa por hoje",
+        "fim de papo ate mais"
+      ],
+      "respostas": [
+        "Bandeira quadriculada! Até a próxima corrida e continue acompanhando a F1!",
+        "Valeu! Quando precisar de mais dados do grid, estarei no pit stop te esperando.",
+        "Até logo! Grande abraço e até a próxima curva!",
+        "Tchau! Obrigado pelo papo de velocidade. Até breve!"
+      ]
+    },
+    {
+      "tag": "campeao_ano",
+      "exemplos": [
+        "quem ganhou o mundial no ano de",
+        "qual piloto foi campeao mundial no ano de",
+        "quem levou o titulo mundial no ano de",
+        "quem foi o campeao mundial de",
+        "qual piloto foi o campeao do ano de",
+        "quem foi o campeao da temporada de",
+        "quem venceu o campeonato mundial no ano de",
+        "resultado do mundial no ano de",
+        "qual piloto venceu o mundial do ano de",
+        "quem ganhou a f1 no ano de",
+        "quem foi o vencedor do mundial no ano de",
+        "quem conquistou o titulo da temporada de"
+      ],
+      "template_resposta": "Em {entidade}, o campeão mundial de Fórmula 1 foi {valor}.",
+      "erro_entidade": "De qual ano você está falando? Não encontrei esse ano na minha base. Experimente perguntar por anos como 1972, 1988, 1991, 1994, 2004, 2007, 2008, 2012, 2021 ou 2023.",
+      "fatos": {
+        "1972": "Emerson Fittipaldi (Lotus) - o primeiro título mundial brasileiro",
+        "1974": "Emerson Fittipaldi (McLaren)",
+        "1981": "Nelson Piquet (Brabham)",
+        "1983": "Nelson Piquet (Brabham)",
+        "1987": "Nelson Piquet (Williams)",
+        "1988": "Ayrton Senna (McLaren)",
+        "1990": "Ayrton Senna (McLaren)",
+        "1991": "Ayrton Senna (McLaren)",
+        "1994": "Michael Schumacher (Benetton)",
+        "2004": "Michael Schumacher (Ferrari) - heptacampeonato com 13 vitórias na temporada",
+        "2007": "Kimi Räikkönen (Ferrari) - conquistado por apenas 1 ponto de vantagem na última etapa",
+        "2008": "Lewis Hamilton (McLaren) - primeiro título com ultrapassagem épica na última volta em Interlagos",
+        "2012": "Sebastian Vettel (Red Bull) - tricampeonato consecutivo em final dramático no Brasil",
+        "2016": "Nico Rosberg (Mercedes) - superando Hamilton e anunciando aposentadoria logo em seguida",
+        "2020": "Lewis Hamilton (Mercedes) - igualando o recorde histórico de 7 títulos mundiais",
+        "2021": "Max Verstappen (Red Bull) - duelo histórico e decisivo na última volta do GP de Abu Dhabi",
+        "2022": "Max Verstappen (Red Bull) - com domínio contundente e recorde de 15 vitórias no ano",
+        "2023": "Max Verstappen (Red Bull) - temporada mais dominante da história, com 19 vitórias em 22 corridas",
+        "2024": "Max Verstappen (Red Bull) - conquistando o tetracampeonato mundial consecutivo"
+      }
+    },
+    {
+      "tag": "titulos_piloto",
+      "exemplos": [
+        "quantos titulos tem o piloto",
+        "quantas vezes foi campeao o piloto",
+        "titulos mundiais do piloto de f1",
+        "quantos campeonatos mundiais ganhou o piloto",
+        "quantas tacas e titulos tem o piloto",
+        "numero de titulos do piloto de f1",
+        "quantas vezes venceu o mundial o piloto",
+        "palmares e conquistas do piloto",
+        "historico de titulos do piloto",
+        "quantos trofeus de campeao tem o piloto",
+        "quantas vezes o piloto foi campeao da f1",
+        "quantos mundiais conquistou o piloto"
+      ],
+      "template_resposta": "O piloto {entidade} possui {valor}.",
+      "erro_entidade": "Não reconheci esse piloto na base. Tente perguntar sobre Ayrton Senna, Lewis Hamilton, Michael Schumacher, Max Verstappen, Sebastian Vettel, Alain Prost, Nelson Piquet, Emerson Fittipaldi ou Fernando Alonso.",
+      "fatos": {
+        "Ayrton Senna": "3 títulos mundiais de Fórmula 1 (1988, 1990 e 1991), todos correndo pela McLaren",
+        "Lewis Hamilton": "7 títulos mundiais (2008 pela McLaren; 2014, 2015, 2017, 2018, 2019 e 2020 pela Mercedes), sendo recordista histórico ao lado de Schumacher",
+        "Michael Schumacher": "7 títulos mundiais (1994 e 1995 pela Benetton; 2000, 2001, 2002, 2003 e 2004 pela Ferrari)",
+        "Max Verstappen": "4 títulos mundiais consecutivos (2021, 2022, 2023 e 2024), todos conquistados pela Red Bull Racing",
+        "Sebastian Vettel": "4 títulos mundiais consecutivos (2010, 2011, 2012 e 2013), todos pela Red Bull Racing",
+        "Alain Prost": "4 títulos mundiais (1985, 1986 e 1989 pela McLaren; 1993 pela Williams)",
+        "Nelson Piquet": "3 títulos mundiais (1981 e 1983 pela Brabham; 1987 pela Williams)",
+        "Emerson Fittipaldi": "2 títulos mundiais (1972 pela Lotus e 1974 pela McLaren)",
+        "Fernando Alonso": "2 títulos mundiais consecutivos (2005 e 2006), ambos pela Renault"
+      }
+    },
+    {
+      "tag": "regras_f1",
+      "exemplos": [
+        "como funciona a regra de",
+        "o que significa a regra de",
+        "para que serve a regra do",
+        "me explica o regulamento e a regra de",
+        "o que e a regra regulamentar de",
+        "como sao as regras e regulamentos de",
+        "qual a funcao da regra de",
+        "quando e aplicada a regra oficial de",
+        "como funciona a regra oficial de",
+        "explicacao sobre a regra de",
+        "entenda a regra do regulamento de",
+        "o que diz o regulamento sobre a regra de"
+      ],
+      "template_resposta": "Sobre {entidade}: {valor}.",
+      "erro_entidade": "Não encontrei essa regra ou procedimento. Tente perguntar sobre DRS, Safety Car, Virtual Safety Car, Pit Stop, Bandeira Vermelha ou Pneus.",
+      "fatos": {
+        "DRS": "Drag Reduction System (Asa Móvel), uma abertura na asa traseira ativada quando o carro está a menos de 1 segundo do rival à frente em zonas demarcadas, reduzindo o arrasto e facilitando ultrapassagens",
+        "Safety Car": "Carro de segurança conduzido por Bernd Mayländer, acionado em caso de acidentes graves ou chuva intensa para agrupar o pelotão e limitar a velocidade por motivos de segurança",
+        "Virtual Safety Car": "Regime eletrônico de neutralização (VSC) no qual todos os carros devem manter um tempo delta positivo obrigatório no volante, sem a necessidade da entrada física do Safety Car na pista",
+        "Pit Stop": "Parada obrigatória nos boxes para troca de pneus e pequenos reparos. Na F1 moderna não há reabastecimento de combustível e a troca de 4 pneus pode durar menos de 2 segundos",
+        "Bandeira Vermelha": "Interrupção total imediata da sessão ou corrida devido a detritos perigosos, chuvas torrenciais ou conserto de barreiras. Todos os carros devem se dirigir lentamente ao pit lane",
+        "Pneus": "A Pirelli fornece três compostos lisos (slick) por etapa (Duro, Médio e Macio), além do Intermediário (faixa verde) para piso molhado e Chuva Pesada (faixa azul)"
+      }
+    },
+    {
+      "tag": "circuitos_famosos",
+      "exemplos": [
+        "onde fica o circuito do autodromo de",
+        "me fale sobre a pista e circuito de",
+        "informacoes sobre o autodromo e circuito de",
+        "caracteristicas do tracado do circuito de",
+        "como e a pista do autodromo de",
+        "historia do circuito e autodromo de",
+        "detalhes da pista de corrida do autodromo de",
+        "fale sobre o tracado do circuito de",
+        "quantas curvas tem o circuito de",
+        "onde esta localizado o circuito do autodromo de",
+        "curiosidades sobre o circuito e autodromo de",
+        "como e a pista de corrida e circuito de"
+      ],
+      "template_resposta": "Sobre o circuito de {entidade}: {valor}.",
+      "erro_entidade": "Não encontrei essa pista na base. Tente perguntar sobre Interlagos, Mônaco, Silverstone, Spa-Francorchamps ou Monza.",
+      "fatos": {
+        "Interlagos": "Autódromo José Carlos Pace em São Paulo (Brasil). Circuito desafiador no sentido anti-horário com desníveis acentuados, o clássico 'S do Senna' e final de reta emocionante",
+        "Monaco": "Circuito de rua lendário nas vielas de Monte Carlo. É a prova mais lenta e glamourosa da F1, famosa pelo cotovelo Fairmont Hairpin e a passagem pelo túnel à beira do porto",
+        "Silverstone": "Sede histórica na Inglaterra que recebeu o primeiro GP oficial da F1 em 1950. É mundialmente famosa pelo trecho de alta velocidade das curvas Maggotts, Becketts e Chapel",
+        "Spa-Francorchamps": "Situado na floresta das Ardenas na Bélgica, possui 7.004 km de extensão e a lendária combinação de curvas Eau Rouge e Raidillon, com subida vertiginosa e clima instável",
+        "Monza": "O 'Templo da Velocidade' na Itália, casa da torcida Ferrari (tifosi). Possui longas retas com pouca carga aerodinâmica onde os carros superam os 350 km/h"
+      }
+    },
+    {
+      "tag": "equipes_famosas",
+      "exemplos": [
+        "fale sobre a escuderia e equipe",
+        "quantos titulos de construtores tem a escuderia",
+        "historia da escuderia e equipe de construtores",
+        "qual o historico da escuderia e equipe",
+        "quantos titulos mundiais a escuderia ganhou",
+        "informacoes sobre a escuderia e equipe de f1",
+        "palmares da escuderia e equipe de construtores",
+        "historia da montadora e escuderia",
+        "titulos de construtores conquistados pela equipe da escuderia",
+        "fale sobre a fabricante e equipe da escuderia de f1",
+        "quantas vezes foi campea de construtores a escuderia",
+        "dados historicos da escuderia e equipe"
+      ],
+      "template_resposta": "Sobre a escuderia {entidade}: {valor}.",
+      "erro_entidade": "Não encontrei essa equipe na base. Tente perguntar sobre Ferrari, McLaren, Williams, Mercedes ou Red Bull.",
+      "fatos": {
+        "Ferrari": "A mais antiga e vitoriosa escuderia da história, presente em todas as temporadas desde 1950, com 16 títulos mundiais de Construtores e 15 de Pilotos",
+        "McLaren": "Fundada por Bruce McLaren, soma 8 títulos de Construtores e 12 de Pilotos, imortalizada pelas conquistas de Emerson Fittipaldi, Ayrton Senna, Alain Prost e Lewis Hamilton",
+        "Williams": "Tradicional equipe britânica fundada por Frank Williams, detentora de 9 títulos mundiais de Construtores conquistados nos anos 80 e 90 com pilotos como Nelson Piquet e Nigel Mansell",
+        "Mercedes": "Dominou amplamente a era dos motores turbo híbridos, conquistando o recorde histórico de 8 títulos consecutivos de Construtores entre 2014 e 2021",
+        "Red Bull": "Equipe austríaca fundada a partir da Jaguar em 2005, tornou-se dominante no esporte acumulando 6 títulos mundiais de Construtores sob a genialidade técnica de Adrian Newey"
+      }
+    }
+  ]
+}
